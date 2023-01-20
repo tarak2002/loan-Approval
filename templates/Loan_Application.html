@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wforth=device-wforth, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style1.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <div class="container">
+        <header>Enter Details</header>
+
+        <form action = "/predict/" method="post">
+            <div class="form first">
+                <div class="personal details">
+                    <span .title>Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>First Name</label>
+                            <input type="text" placeholder="Enter your First Name">
+                        </div>
+                        <div class="input-field">
+                            <label>Middle Name</label>
+                            <input type="text" placeholder="Enter your Middle Name"  >
+                        </div>
+                        <div class="input-field">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Enter your Last Name">
+                        </div>
+                        <div class="input-field">
+                            <label>Fathers Name</label>
+                            <input type="text" placeholder="Enter your Fathers Name">
+                        </div>
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter your Name">
+                        </div>
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" placeholder="Enter your Email">
+                        </div>
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter your Mobile Number">
+                        </div>
+                        <div class="input-field" for="Gender">
+                            <label>Gender</label>
+                            <select name="Gender" required>
+                                <option disabled selected>Select gender</option>
+                                <option value='male'>Male</option>
+                                <option value='female'>Female</option>
+                                <option value='female'>Others</option>
+                            </select>               
+                        </div>
+                        <div class="input-field" for="Education">
+                            <label>Education</label>
+                            <select name = "Education" required>
+                                <option disabled selected>Select Education Level</option>
+                                <option value="graduate"  >Graduate</option>
+                                <option value="not Graduate"> Not Graduate</option>
+                            </select>
+                        </div>
+                        <div class="input-field" for="Self_Employed">
+                            <label>Employment status</label>
+                            <select name="Self_Employed" required>
+                                <option disabled selected>Select Employment status</option>
+                                <option value="No">Employed</option>
+                                <option value="Yes"> Self Employed</option>
+                                <option value="Yes">I do both</option>
+                                <option value="No">None of above</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-field" for="ApplicantIncome">
+                            <label>Applicant Income</label>
+                            <input type="number" id="ApplicantIncome" name="ApplicantIncome" placeholder="Enter your Applicant Income" required>
+                        </div>
+                        <div class="input-field" for="CoapplicantIncome">
+                            <label>Co Applicant Income</label>
+                            <input type="number" id="CoapplicantIncome" name="CoapplicantIncome" placeholder="Enter your Co Applicant Income" required>
+                        </div>
+                        <div class="details address">
+                            
+                            <div class="fields">
+                                <div class="input-field" for="Married">
+                                    <label>Marital status</label>
+                                    <select name="Married" required>
+                                        <option disabled selected>Select gender</option>
+                                        <option value='married'>Married</option>
+                                        <option value='unwed'>Unwed.</option>
+                                        <option value='female'>Others</option>
+                                    </select>
+                                </div>
+                                <div class="input-field" for="Property_Area">
+                                    <label>Property Locality</label>
+                                    <select name = "Property_Area" required>
+                                        <option disabled selected>Select Property Location</option>
+                                        <option value="urban">urban</option>
+                                        <option value="Semiurban">Semi urban</option>
+                                        <option value="Rural">Rural</option>
+                                    </select>
+                                </div>
+                                <div class="input-field">
+                                    <label>Pincode</label>
+                                    <input type="number" placeholder="Enter your City Pincode">
+                                </div>
+                                
+                                <div class="input-field" for="LoanAmount">
+                                    <label>Loan Amount</label>
+                                    <input type="number" id="LoanAmount" name="LoanAmount" placeholder="Enter your Loan Amount" required>
+                                </div>
+                                <div class="input-field" for="Loan_Amount_Term">
+                                    <label>Loan Period</label>
+                                    <input  id="Loan_Amount_Term" name="Loan_Amount_Term" type="number" placeholder="Loan Peroid in Months" required>
+                                </div>
+                                <div class="input-field" for="Credit_History">
+                                    <label>Credit History</label>
+                                    <select name = "Credit_History" required>
+                                        <option disabled selected>Select Credit History</option>
+                                        <option value="yes"  >No Previous Debts</option>
+                                        <option value="no"> Having Previous Debts</option>
+                                    </select>
+                                </div>
+                                <div class="input-field">
+                                    <label>Monthly Installment</label>
+                                    <input type="number"  placeholder="Enter your Monthly Instalment ">
+                                </div>
+                                <div class="input-field" >
+                                    <label>Collateral</label>
+                                    <select>
+                                        <option disabled selected>Select Collateral</option>
+                                        <option>Land</option>
+                                    
+                                    </select>
+                                </div>
+                                <div class="input-field">
+                                    <label>Collateral Area</label>
+                                    <input type="number" placeholder="Enter your Collateral Area(Acres) " >
+                                    
+                                </div>
+                                <div class="input-field" for="dependents">
+                                    <label>Dependents</label>
+                                    <select>
+                                        <option disabled selected>Enter No. of Dependents </option>
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3+</option>
+                                    
+                                    </select>
+                                </div>
+                                <div class="input-field">
+                                    <label>Background Verification</label>
+                                    <select>
+                                        <option disabled selected>Select Verification</option>
+                                        <option>Complete</option>
+                                        <option>Incomplete</option>
+                                    </select>
+                                </div>
+                                <div class="input-field">
+                                    <label>Loan Type</label>
+                                    <select>
+                                        <option disabled selected>Select Loan Type</option>
+                                        <option>Personal Loan</option>
+                                        <option>Credit Card Loan</option>
+                                        <option>Home Loan</option>
+                                        <option>Car Loan</option>
+                                        <option>Small Business Loan</option>
+                                        <option>Agriculture Loan</option>
+                                        <option>Gold Loan</option>
+                                    </select>
+                                </div>
+                                <div class="buttons">
+                                    <div class="backBtn">
+                                        <i class="uil uil-navigator"></i>
+                                        <span class="btnText">Back</span>
+                                    </div>
+                                    
+                                    <button class="sumbit" href="predict">
+                                        <span class="btnText" >Predict</span>
+                                        <i class="uil uil-navigator"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> 
+                        
+                    </div>
+                </div>            
+            </div>
+        </form>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

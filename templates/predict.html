@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="row justify-content-md-center mb-4">
+        <h3 class='text-primary'>Prediction is {{ prediction }}</h3>
+    
+    </div>
+
+
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction == 0 %}
+                <!-- <img src="{{url_for('static', filename='images/iris_setosa.jpg')}}" class="img-thumbnail" /> --> 
+                
+                <div class="ani">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_hfnjm1i3.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                </div>
+                <h1>Your Loan Application has been rejected</h1>
+                <style>
+                    .ani{
+                        margin-top: 5%;
+                        margin-left: 200px;
+                    }
+                </style>                 
+            {% endif %}
+        </div>
+    </div>
+        
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction == 1 %}
+                <!-- <img src="{{url_for('static', filename='images/iris_versicolor.jpg')}}" class="img-thumbnail" /> --> 
+                
+                <div class="ani">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_5vfzmcqx.json"  background="transparent" speed="1"  style="width: 500px; height: 500px loop autoplay;"  loop autoplay></lottie-player>
+                </div>
+                <h1>Your Loan Application has been Approved!</h1>
+                <style>
+                .ani{
+                    margin-top: 5%;
+                    margin-left: 150px;
+                }
+                </style>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
